@@ -1,0 +1,11 @@
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+     path("api/", include("api.urls")), 
+    path('api/citybus/', include('api.urls')),        # rename api route
+    path('api/chatbot/', include('chatbot.urls')),
+    path('api/routebus/', include('routebus.urls')),
+    path('api/', include('multimodal.urls')), 
+]

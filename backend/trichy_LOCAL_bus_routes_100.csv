@@ -1,0 +1,102 @@
+bus_number,bus_name,from_location,to_location,cost,distance_km,duration_mins,next_bus_in_mins,crowd_level
+630C,Puthur to Ponmalai,Puthur,Ponmalai,40,6.1,14,19,Low
+223D,Tiruchirapalli Junction to BHEL Township,Tiruchirapalli Junction,BHEL Township,6,10,14,9,Medium
+909D,Thillai Nagar to Airport,Thillai Nagar,Airport,38,13.7,22,8,High
+82D,Srirangam to Tiruvanaikoil,Srirangam,Tiruvanaikoil,10,4.1,13,14,Low
+445D,Cantonment to Ponmalai,Cantonment,Ponmalai,23,7.6,25,11,Medium
+586A,Srirangam to Fathima Nagar,Srirangam,Fathima Nagar,36,3.1,36,23,Medium
+132A,Kona Nagar to Chatram Bus Stand,Kona Nagar,Chatram Bus Stand,26,4.5,43,29,High
+171C,Woraiyur to Kumaravayalur,Woraiyur,Kumaravayalur,39,12.8,14,3,High
+656D,Ponmalai to Central Bus Stand,Ponmalai,Central Bus Stand,14,7.8,30,26,Medium
+239D,Cantonment to Kattur,Cantonment,Kattur,20,6.1,31,9,High
+55C,Ariyamangalam to Kumaravayalur,Ariyamangalam,Kumaravayalur,27,12.1,22,11,Low
+147A,Srirangam to Kona Nagar,Srirangam,Kona Nagar,16,9.4,29,20,Medium
+28B,Tiruvanaikoil to Thillai Nagar,Tiruvanaikoil,Thillai Nagar,32,3.3,18,23,Low
+134C,Edamalaipatti Pudur to Woraiyur,Edamalaipatti Pudur,Woraiyur,29,7.3,27,16,High
+526A,Cantonment to Kona Nagar,Cantonment,Kona Nagar,26,5,44,13,Medium
+448A,Kattur to Srirangam,Kattur,Srirangam,9,4.9,24,5,High
+37A,Edamalaipatti Pudur to Kumaravayalur,Edamalaipatti Pudur,Kumaravayalur,9,6,29,23,Medium
+73D,Cantonment to BHEL Township,Cantonment,BHEL Township,26,12.4,27,18,High
+69A,Cantonment to Srirangam,Cantonment,Srirangam,6,11.1,28,21,Low
+372C,Tiruchirapalli Junction to Puthur,Tiruchirapalli Junction,Puthur,30,3.4,29,27,Low
+662B,Tiruchirapalli Junction to Airport,Tiruchirapalli Junction,Airport,14,3.5,26,9,Medium
+13B,Thillai Nagar to Kona Nagar,Thillai Nagar,Kona Nagar,13,13.9,10,14,Medium
+944A,Thillai Nagar to Chatram Bus Stand,Thillai Nagar,Chatram Bus Stand,12,7.3,25,30,Low
+497D,Puthur to Chatram Bus Stand,Puthur,Chatram Bus Stand,23,14.6,13,21,High
+697C,Ponmalai to K.K. Nagar,Ponmalai,K.K. Nagar,32,12.9,16,4,High
+483A,Cantonment to Chatram Bus Stand,Cantonment,Chatram Bus Stand,24,9.7,24,22,Low
+9B,Kattur to Samayapuram,Kattur,Samayapuram,30,7.3,44,29,High
+471B,Srirangam to Thillai Nagar,Srirangam,Thillai Nagar,5,4.5,24,19,High
+608B,Ariyamangalam to Woraiyur,Ariyamangalam,Woraiyur,15,8.7,29,26,Medium
+389B,Srirangam to Ponmalai,Srirangam,Ponmalai,22,11,27,24,High
+875D,Central Bus Stand to Thillai Nagar,Central Bus Stand,Thillai Nagar,32,11.6,25,10,Low
+68C,Tiruvanaikoil to Puthur,Tiruvanaikoil,Puthur,31,12.4,13,18,Medium
+890B,Woraiyur to Srirangam,Woraiyur,Srirangam,18,12.2,24,23,Medium
+450B,Ariyamangalam to Edamalaipatti Pudur,Ariyamangalam,Edamalaipatti Pudur,27,7.4,27,5,High
+886C,Woraiyur to Ponmalai,Woraiyur,Ponmalai,6,5.9,42,6,Medium
+493B,Kona Nagar to Tiruchirapalli Junction,Kona Nagar,Tiruchirapalli Junction,12,8.2,24,21,Medium
+902C,Airport to Tiruvanaikoil,Airport,Tiruvanaikoil,35,3.5,14,29,Low
+451A,Samayapuram to Kumaravayalur,Samayapuram,Kumaravayalur,26,5.4,13,3,High
+388B,Central Bus Stand to BHEL Township,Central Bus Stand,BHEL Township,24,7.4,17,17,High
+520B,Airport to Ponmalai,Airport,Ponmalai,16,10.8,35,19,Low
+579C,Ponmalai to Edamalaipatti Pudur,Ponmalai,Edamalaipatti Pudur,35,4.3,43,18,High
+627C,K.K. Nagar to Puthur,K.K. Nagar,Puthur,14,2.2,11,14,Medium
+96D,Thillai Nagar to Fathima Nagar,Thillai Nagar,Fathima Nagar,11,2.1,19,24,Low
+806D,BHEL Township to Ponmalai,BHEL Township,Ponmalai,24,10.6,39,6,Medium
+992A,Ponmalai to Edamalaipatti Pudur,Ponmalai,Edamalaipatti Pudur,5,5.7,45,25,Medium
+744D,Srirangam to Kumaravayalur,Srirangam,Kumaravayalur,21,11.8,15,8,Medium
+933D,Ariyamangalam to Chatram Bus Stand,Ariyamangalam,Chatram Bus Stand,9,13.3,40,10,Medium
+88B,Kona Nagar to Srirangam,Kona Nagar,Srirangam,29,14.1,44,13,Low
+110B,Cantonment to Chatram Bus Stand,Cantonment,Chatram Bus Stand,20,10.3,23,6,Low
+138D,Central Bus Stand to Tiruvanaikoil,Central Bus Stand,Tiruvanaikoil,9,6.8,26,25,High
+826B,Tiruchirapalli Junction to BHEL Township,Tiruchirapalli Junction,BHEL Township,24,8.3,29,24,Low
+775D,Tiruvanaikoil to Central Bus Stand,Tiruvanaikoil,Central Bus Stand,16,13,15,25,High
+744B,Thillai Nagar to Puthur,Thillai Nagar,Puthur,18,9.8,30,2,High
+368C,K.K. Nagar to Kona Nagar,K.K. Nagar,Kona Nagar,19,2.6,10,3,Low
+720B,Edamalaipatti Pudur to K.K. Nagar,Edamalaipatti Pudur,K.K. Nagar,21,9.7,33,8,High
+910B,Kattur to Woraiyur,Kattur,Woraiyur,9,9.1,16,10,Low
+557A,Airport to Srirangam,Airport,Srirangam,23,7.9,27,17,Medium
+813C,Cantonment to Edamalaipatti Pudur,Cantonment,Edamalaipatti Pudur,7,6.8,17,29,Medium
+757C,BHEL Township to Samayapuram,BHEL Township,Samayapuram,33,10.7,44,21,Medium
+848B,Edamalaipatti Pudur to Kona Nagar,Edamalaipatti Pudur,Kona Nagar,5,9,45,13,High
+139C,Chatram Bus Stand to Ariyamangalam,Chatram Bus Stand,Ariyamangalam,12,4.1,10,17,Medium
+826A,Edamalaipatti Pudur to Kona Nagar,Edamalaipatti Pudur,Kona Nagar,11,9.8,18,19,Low
+752B,Thillai Nagar to K.K. Nagar,Thillai Nagar,K.K. Nagar,6,7.6,13,27,Medium
+40B,Ariyamangalam to Woraiyur,Ariyamangalam,Woraiyur,29,2.4,41,27,Low
+909D,Kattur to Fathima Nagar,Kattur,Fathima Nagar,23,5.5,15,7,High
+87C,Central Bus Stand to Tiruchirapalli Junction,Central Bus Stand,Tiruchirapalli Junction,28,4.2,15,2,High
+461A,Samayapuram to Fathima Nagar,Samayapuram,Fathima Nagar,33,14.4,28,10,Medium
+822D,Ponmalai to Chatram Bus Stand,Ponmalai,Chatram Bus Stand,40,8.4,21,20,Low
+730D,Cantonment to Central Bus Stand,Cantonment,Central Bus Stand,15,11.9,31,23,Low
+348B,Ponmalai to Chatram Bus Stand,Ponmalai,Chatram Bus Stand,19,9,25,2,Medium
+892C,Cantonment to Srirangam,Cantonment,Srirangam,8,2.6,21,26,Medium
+431D,Puthur to Chatram Bus Stand,Puthur,Chatram Bus Stand,37,14.6,28,25,Medium
+296B,Cantonment to Tiruchirapalli Junction,Cantonment,Tiruchirapalli Junction,5,3.2,13,27,High
+165D,Ariyamangalam to Srirangam,Ariyamangalam,Srirangam,21,6,19,21,Low
+847B,Edamalaipatti Pudur to Kattur,Edamalaipatti Pudur,Kattur,36,13.8,28,14,Medium
+875B,Chatram Bus Stand to Tiruchirapalli Junction,Chatram Bus Stand,Tiruchirapalli Junction,36,7.7,45,8,Medium
+294B,Tiruchirapalli Junction to Chatram Bus Stand,Tiruchirapalli Junction,Chatram Bus Stand,32,4.9,13,2,Low
+547A,Puthur to Tiruvanaikoil,Puthur,Tiruvanaikoil,28,10.5,19,3,Medium
+185A,Airport to Tiruvanaikoil,Airport,Tiruvanaikoil,23,2.7,15,8,Low
+588B,Tiruchirapalli Junction to Kona Nagar,Tiruchirapalli Junction,Kona Nagar,15,12.7,21,27,High
+640C,K.K. Nagar to BHEL Township,K.K. Nagar,BHEL Township,16,2.8,23,21,Low
+789C,Kattur to Fathima Nagar,Kattur,Fathima Nagar,15,4.8,13,14,Medium
+367B,Airport to Tiruvanaikoil,Airport,Tiruvanaikoil,9,7.5,20,14,Low
+998D,Samayapuram to Kona Nagar,Samayapuram,Kona Nagar,22,14.2,20,26,Medium
+617A,Tiruvanaikoil to Kona Nagar,Tiruvanaikoil,Kona Nagar,13,4.3,17,6,Low
+835B,Kona Nagar to Airport,Kona Nagar,Airport,18,2.4,27,25,Low
+227A,Tiruchirapalli Junction to Kumaravayalur,Tiruchirapalli Junction,Kumaravayalur,13,14.6,29,26,High
+340B,Srirangam to Kumaravayalur,Srirangam,Kumaravayalur,5,13.8,26,30,High
+830D,Fathima Nagar to Central Bus Stand,Fathima Nagar,Central Bus Stand,19,10.3,24,14,Low
+100C,Kumaravayalur to Kattur,Kumaravayalur,Kattur,37,14.2,33,27,Low
+651B,Tiruchirapalli Junction to Fathima Nagar,Tiruchirapalli Junction,Fathima Nagar,40,4.5,41,5,Low
+204D,Ariyamangalam to Kumaravayalur,Ariyamangalam,Kumaravayalur,18,15,21,29,Medium
+508D,Edamalaipatti Pudur to Woraiyur,Edamalaipatti Pudur,Woraiyur,32,13.7,21,12,Low
+135C,Ponmalai to Samayapuram,Ponmalai,Samayapuram,14,13.8,14,22,Medium
+787D,Kona Nagar to Puthur,Kona Nagar,Puthur,34,8.4,43,21,Medium
+698A,Fathima Nagar to Ponmalai,Fathima Nagar,Ponmalai,21,5.5,40,16,High
+158D,Cantonment to Edamalaipatti Pudur,Cantonment,Edamalaipatti Pudur,8,10,24,9,High
+389A,K.K. Nagar to Kona Nagar,K.K. Nagar,Kona Nagar,16,3.2,38,28,Low
+482A,Tiruchirapalli Junction to Kona Nagar,Tiruchirapalli Junction,Kona Nagar,12,4.9,31,24,Medium
+536A,Samayapuram to Woraiyur,Samayapuram,Woraiyur,19,8.5,29,20,High
+452M,NO 1 Tolgate to Chatram bus stand,NO 1 Tolgate,Chatram Bus Stand,10,5,10,10,High

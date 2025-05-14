@@ -12,7 +12,6 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Show back button on all pages except Home '/'
   const shouldShowBack = location.pathname !== "/";
 
   return (
@@ -31,12 +30,12 @@ const Navbar = () => {
           )}
           <Link to="/" className="fixed top--1 left-0 z-20 flex items-center gap-2">
           <img 
-            src="http://127.0.0.1:8000/lovable-uploads/nel.png" 
+            src="http://127.0.0.1:8000/media/images/newl.png" 
             alt="GoRoute Logo" 
             className="fixed top--1 left-1 w-40 z-50 block dark:hidden w-32 h-auto" 
           />
           <img 
-            src="http://127.0.0.1:8000/lovable-uploads/neww.png" 
+            src="http://127.0.0.1:8000/media/images/nel.png" 
             alt="GoRoute Logo" 
             className="fixed top--1 left-1 w-40 z-50 hidden dark:block w-32 h-auto" 
           />
@@ -53,7 +52,6 @@ const Navbar = () => {
           </Button>
         </div>
       </div>
-      {/* Settings Menu */}
       <SettingsMenu open={settingsOpen} onOpenChange={setSettingsOpen} />
     </header>
   );

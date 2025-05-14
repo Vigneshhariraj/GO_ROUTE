@@ -10,7 +10,7 @@ export default {
         border: "hsl(0, 0%, 90%)",
         background: "hsl(0, 0%, 100%)",
         foreground: "hsl(0, 0%, 10%)",
-        accent: "hsl(24, 94%, 50%)", // OR choose another color you want for accent
+        accent: "hsl(24, 94%, 50%)", 
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

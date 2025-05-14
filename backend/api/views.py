@@ -26,15 +26,15 @@ class CityBusSearchAPIView(APIView):
         if not from_location or not to_location:
             return Response({'error': 'Missing query parameters'}, status=status.HTTP_400_BAD_REQUEST)
 
-        # 🔍 Debug: Show the search input
+       
         print("🔍 User search:", from_location, "→", to_location)
 
-        # 🔍 Debug: List what’s in DB (using correct fields)
+       
         print("🚌 Available buses in DB:")
         for bus in CityBus.objects.all():
             print("-", bus.from_location.lower(), "→", bus.to_location.lower())
 
-        # ✅ Perform case-insensitive search on correct fields
+        
         buses = CityBus.objects.filter(
             from_location__icontains=from_location,
             to_location__icontains=to_location

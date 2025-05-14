@@ -27,21 +27,19 @@ const ARNavigationView: React.FC<ARNavigationViewProps> = ({
   fromLocation,
   toLocation
 }) => {
-  // Image source will be loaded from the public directory
   const arBackgroundImage = "/lovable-uploads/4794c76d-76a5-4f14-8b19-f2e1488680b9.png";
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-full w-full h-[85vh] p-0 mx-0 sm:mx-0 rounded-lg overflow-hidden">
         <div className="relative h-full w-full">
-          {/* Background image - the corridor/hallway */}
           <img 
             src={arBackgroundImage} 
             alt="Terminal Corridor" 
             className="w-full h-full object-cover"
           />
           
-          {/* Top navigation bar */}
+        
           <div className="absolute top-0 left-0 right-0 bg-blue-600 text-white p-3 flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <MapPin className="h-5 w-5 text-green-300" />
@@ -71,7 +69,7 @@ const ARNavigationView: React.FC<ARNavigationViewProps> = ({
             </div>
           </div>
 
-          {/* Error popup if off route */}
+          
           {isOffRoute && (
             <div className="absolute top-24 right-5 bg-white p-4 rounded-lg shadow-lg w-48">
               <div className="flex items-start mb-2">
@@ -92,14 +90,14 @@ const ARNavigationView: React.FC<ARNavigationViewProps> = ({
             </div>
           )}
 
-          {/* Direction indicator arrow - only shown when not off route */}
+         
           {!isOffRoute && (
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <ArrowUp className="h-32 w-32 text-blue-500 filter drop-shadow-lg" />
             </div>
           )}
 
-          {/* Bottom instruction bar */}
+          
           <div className="absolute bottom-10 left-5 right-5">
             <div className="bg-black/70 text-white p-4 rounded-lg text-center">
               <p className="text-xl font-medium">{currentDirection}</p>

@@ -55,7 +55,6 @@ const Seat = ({ id, type, price, onClick }: SeatProps) => {
   );
 };
 
-// ✅ FIXED: TypeScript now knows what props this component accepts
 const BusSeatSelector: React.FC<BusSeatSelectorProps> = ({ bus, onClose, onSeatsBooked }) => {
   const [seats, setSeats] = useState<SeatData[]>([]);
   const [selectedSeats, setSelectedSeats] = useState<string[]>([]);

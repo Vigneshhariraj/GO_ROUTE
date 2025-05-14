@@ -16,7 +16,7 @@ const NavigationMap: React.FC<NavigationMapProps> = ({
 }) => {
   return (
     <div className="relative w-full h-[60vh] bg-accent/5 rounded-lg overflow-hidden border">
-      {/* Map Grid Background */}
+      
       <div 
         className="absolute inset-0" 
         style={{
@@ -25,19 +25,18 @@ const NavigationMap: React.FC<NavigationMapProps> = ({
         }}
       />
 
-      {/* Navigation Path */}
+      
       <div className="absolute inset-0 p-6">
         <div className="relative h-full">
-          {/* Path Line */}
           <div className="absolute left-4 top-4 bottom-4 w-1 bg-accent/20" />
           
-          {/* Progress Line */}
+          
           <div 
             className="absolute left-4 top-4 w-1 bg-accent transition-all duration-500"
             style={{ height: `${navigationProgress}%` }}
           />
 
-          {/* Stops/Checkpoints */}
+          
           {stops.map((stop, index) => {
             const isActive = stop.name === currentCheckpoint;
             const isPast = stop.isPassed || navigationProgress > (index / (stops.length - 1)) * 100;

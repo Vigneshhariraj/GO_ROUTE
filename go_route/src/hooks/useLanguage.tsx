@@ -7,7 +7,7 @@ type LanguageContextType = {
   t: (key: string) => string;
 };
 
-// Extended translations for demonstration
+
 const translations: Record<string, Record<string, string>> = {
   en: {
     "language.current": "English",

@@ -12,7 +12,7 @@ import WakeMeUpModal from "@/components/bus/WakeMeUpModal";
 import BusTrackingView from "@/components/bus/BusTrackingView";
 import BusSeatSelector from "@/components/bus/BusSeatSelector";
 import BookedTicketModal from "@/components/bus/BookedTicketModal";
-import { BookingSuccessModal } from "@/components/route-book/BookingSuccessModal"; // ✅ Import BookingSuccessModal
+import { BookingSuccessModal } from "@/components/route-book/BookingSuccessModal"; 
 
 const RouteBook = () => {
   const { t } = useLanguage();
@@ -90,7 +90,7 @@ const RouteBook = () => {
   const handleSeatsBooked = (bus: BusData, seats: string[], amount: number) => {
     setShowSeatSelector(false);
     setBookedTicket({ bus, seats, amount, travelDate });
-    setShowBookingSuccess(true); // ✅ Show BookingSuccessModal first
+    setShowBookingSuccess(true);
     toast.success("Booking confirmed!");
   };
 
@@ -105,7 +105,7 @@ const RouteBook = () => {
         </p>
       </div>
 
-      {/* Multi-Step Flow */}
+      
       {step === 1 && (
         <SearchStep
           fromCity={fromCity}
@@ -143,7 +143,7 @@ const RouteBook = () => {
         />
       )}
 
-      {/* Seat Selector */}
+      
       {showSeatSelector && selectedBus && (
         <BusSeatSelector
           bus={selectedBus}
@@ -152,22 +152,22 @@ const RouteBook = () => {
         />
       )}
 
-      {/* Booking Success Modal */}
+    
       {showBookingSuccess && (
   <BookingSuccessModal
-    open={showBookingSuccess} // ✅ Pass open
+    open={showBookingSuccess} 
     onClose={() => setShowBookingSuccess(false)}
     onViewTicket={() => {
       setShowBookingSuccess(false);
       if (bookedTicket) {
-        // Open Ticket modal after success
+      
       }
     }}
   />
 )}
 
 
-      {/* Booked Ticket */}
+      
       {bookedTicket && !showBookingSuccess && (
         <BookedTicketModal
           ticket={bookedTicket}
@@ -181,7 +181,7 @@ const RouteBook = () => {
         />
       )}
 
-      {/* Waitlist Modal */}
+  
       {showWaitlistModal && selectedBus && (
         <WaitlistModal
           bus={selectedBus}
@@ -189,7 +189,6 @@ const RouteBook = () => {
         />
       )}
 
-      {/* Wake Me Up Modal */}
       {showWakeMeUpModal && wakeMeUpBus && (
         <WakeMeUpModal
           bus={wakeMeUpBus}
@@ -197,7 +196,6 @@ const RouteBook = () => {
         />
       )}
 
-      {/* Bus Tracking View */}
       {showTrackingView && selectedBus && (
         <BusTrackingView
           busName={selectedBus.type}

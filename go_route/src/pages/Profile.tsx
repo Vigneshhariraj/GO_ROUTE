@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
-import { User, Mail, Phone, ShieldAlert, Sun, Moon, Edit, LogOut } from "lucide-react"; // ✅ Added LogOut here
+import { User, Mail, Phone, ShieldAlert, Sun, Moon, Edit, LogOut } from "lucide-react"; 
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useTheme } from "@/components/theme-provider";
 import { useLanguage } from "@/hooks/useLanguage";
@@ -16,7 +16,6 @@ import { toast } from "sonner";
 import FloatingChatButton from "@/components/FloatingChatButton";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
-// ✅ Define TypeScript interface
 interface UserProfile {
   name: string;
   email: string;
@@ -43,7 +42,7 @@ const Profile = () => {
   });
 
   const [profileImage, setProfileImage] = useState<string | null>(null);
-  const userId = "USR123456"; // Mock ID for now
+  const userId = "USR123456"; 
 
   useEffect(() => {
     axios.get<UserProfile>("http://127.0.0.1:8000/api/profile/")

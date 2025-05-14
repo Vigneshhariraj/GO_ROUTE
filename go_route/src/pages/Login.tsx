@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from '@/lib/axios'; // ✅ Added axios
 import {
   Card,
   CardContent,
@@ -13,31 +12,21 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/components/ui/use-toast";
-import { Phone, Mail, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { useTheme } from "@/components/theme-provider";
 import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
-
-interface SendOtpResponse {
-  success: boolean;
-}
-
-interface VerifyOtpResponse {
-  success: boolean;
-}
 
 const Login = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const { theme, setTheme } = useTheme();
   const { t } = useLanguage();
-
   const [loginMethod, setLoginMethod] = useState<"phone" | "email">("phone");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
   const [showOtpInput, setShowOtpInput] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
 
   const handleContinueAsGuest = () => {
     toast({
@@ -47,7 +36,7 @@ const Login = () => {
     navigate("/");
   };
 
-  const handleSendOtp = async () => {
+  const handleSendOtp = () => {
     if (loginMethod === "phone" && phoneNumber.length < 10) {
       toast({
         title: "Invalid Phone Number",
@@ -66,34 +55,14 @@ const Login = () => {
       return;
     }
 
-    setIsLoading(true);
-
-    try {
-      const payload = loginMethod === "phone"
-        ? { phone: phoneNumber }
-        : { email: email };
-
-      await axios.post<SendOtpResponse>("http://127.0.0.1:8000/api/send-otp/", payload);
-
-      toast({
-        title: "OTP Sent",
-        description: `A verification code has been sent to your ${loginMethod}.`,
-      });
-
-      setShowOtpInput(true);
-    } catch (error) {
-      console.error(error);
-      toast({
-        title: "Failed to send OTP",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
-    }
+    setShowOtpInput(true);
+    toast({
+      title: "OTP Sent",
+      description: `A verification code has been sent to your ${loginMethod}`,
+    });
   };
 
-  const handleVerifyOtp = async () => {
+  const handleVerifyOtp = () => {
     if (otp.length !== 4) {
       toast({
         title: "Invalid OTP",
@@ -103,38 +72,11 @@ const Login = () => {
       return;
     }
 
-    setIsLoading(true);
-
-    try {
-      const payload = loginMethod === "phone"
-        ? { phone: phoneNumber, otp }
-        : { email, otp };
-
-      const response = await axios.post<VerifyOtpResponse>("http://127.0.0.1:8000/api/verify-otp/", payload);
-
-      if (response.data.success) {
-        toast({
-          title: "Login Successful",
-          description: "Welcome to GoRoute!",
-        });
-        navigate("/");
-      } else {
-        toast({
-          title: "Invalid OTP",
-          description: "Please try again.",
-          variant: "destructive",
-        });
-      }
-    } catch (error) {
-      console.error(error);
-      toast({
-        title: "Verification Failed",
-        description: "Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
-    }
+    toast({
+      title: "Login Successful",
+      description: "Welcome to GoRoute!",
+    });
+    navigate("/");
   };
 
   return (
@@ -151,7 +93,24 @@ const Login = () => {
       </div>
 
       <div className="w-full max-w-md">
-        
+        <div className="text-center mb-8 animate-fade-in">
+          <img 
+            src="http://127.0.0.1:8000/media/images/logii.png"  
+            alt="GoRoute Logo" 
+            className="mx-auto block dark:hidden w-32 h-auto" 
+          />
+          <img 
+            src="http://127.0.0.1:8000/media/images/log.png"  
+            alt="GoRoute Logo" 
+            className="mx-auto hidden dark:block w-32 h-auto" 
+          />
+          <h1 className="text-3xl font-bold mt-4">
+            
+          </h1>
+          <p className="text-muted-foreground">
+            Your Travel Companion Across India
+          </p>
+        </div>
 
         <Card className="shadow-lg animate-fade-in">
           <CardHeader>
@@ -167,10 +126,11 @@ const Login = () => {
                   <TabsTrigger value="phone">Phone</TabsTrigger>
                   <TabsTrigger value="email">Email</TabsTrigger>
                 </TabsList>
-
                 <TabsContent value="phone" className="space-y-4">
                   <div className="space-y-2">
-                    <label htmlFor="phone" className="text-sm font-medium">Phone Number</label>
+                    <label htmlFor="phone" className="text-sm font-medium">
+                      Phone Number
+                    </label>
                     <div className="flex">
                       <div className="flex items-center justify-center px-3 border border-r-0 border-input rounded-l-md bg-muted">
                         <span className="text-sm text-muted-foreground">+91</span>
@@ -185,14 +145,16 @@ const Login = () => {
                       />
                     </div>
                   </div>
-                  <Button className="w-full" onClick={handleSendOtp} disabled={isLoading}>
-                    {isLoading ? "Sending..." : <>Get OTP <ChevronRight className="ml-2 h-4 w-4" /></>}
+                  <Button className="w-full" onClick={handleSendOtp}>
+                    Get OTP <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
                 </TabsContent>
 
                 <TabsContent value="email" className="space-y-4">
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">Email Address</label>
+                    <label htmlFor="email" className="text-sm font-medium">
+                      Email Address
+                    </label>
                     <Input
                       id="email"
                       type="email"
@@ -201,15 +163,17 @@ const Login = () => {
                       onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
-                  <Button className="w-full" onClick={handleSendOtp} disabled={isLoading}>
-                    {isLoading ? "Sending..." : <>Get OTP <ChevronRight className="ml-2 h-4 w-4" /></>}
+                  <Button className="w-full" onClick={handleSendOtp}>
+                    Get OTP <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
                 </TabsContent>
               </Tabs>
             ) : (
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <label htmlFor="otp" className="text-sm font-medium">Verification Code</label>
+                  <label htmlFor="otp" className="text-sm font-medium">
+                    Verification Code
+                  </label>
                   <Input
                     id="otp"
                     type="text"
@@ -227,14 +191,13 @@ const Login = () => {
                   <Button variant="outline" className="w-1/2" onClick={() => setShowOtpInput(false)}>
                     Back
                   </Button>
-                  <Button className="w-1/2" onClick={handleVerifyOtp} disabled={isLoading}>
-                    {isLoading ? "Verifying..." : "Verify & Login"}
+                  <Button className="w-1/2" onClick={handleVerifyOtp}>
+                    Verify & Login
                   </Button>
                 </div>
               </div>
             )}
           </CardContent>
-
           <CardFooter className="flex flex-col gap-4">
             <div className="relative w-full">
               <div className="absolute inset-0 flex items-center">

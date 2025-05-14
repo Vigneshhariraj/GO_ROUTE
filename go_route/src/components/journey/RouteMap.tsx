@@ -3,9 +3,6 @@ import React, { useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-// Since we don't have a Mapbox token set up, we'll use a placeholder map
-// In a real app, you would set mapboxgl.accessToken = 'your-token-here';
-
 interface RouteMapProps {
   from: string;
   to: string;
@@ -28,16 +25,14 @@ const RouteMap: React.FC<RouteMapProps> = ({ from, to, segments }) => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
 
-  // For demo purposes, we'll use fixed coordinates
-  // In a real app, you would geocode the from and to addresses
-  const fromCoords: [number, number] = [77.5946, 12.9716]; // Bangalore
-  const toCoords: [number, number] = [77.7085, 13.1986]; // Bangalore Airport
+  const fromCoords: [number, number] = [77.5946, 12.9716];
+  const toCoords: [number, number] = [77.7085, 13.1986]; 
 
   useEffect(() => {
     if (!mapContainer.current) return;
 
     try {
-      // Create a mock map element that shows an image
+      
       const mockMap = document.createElement('div');
       mockMap.style.width = '100%';
       mockMap.style.height = '100%';
@@ -49,7 +44,7 @@ const RouteMap: React.FC<RouteMapProps> = ({ from, to, segments }) => {
       mockMap.style.position = 'relative';
       mockMap.style.overflow = 'hidden';
 
-      // Add from and to markers
+      
       const fromMarker = document.createElement('div');
       fromMarker.style.position = 'absolute';
       fromMarker.style.left = '30%';
@@ -70,7 +65,7 @@ const RouteMap: React.FC<RouteMapProps> = ({ from, to, segments }) => {
       toMarker.style.borderRadius = '50%';
       toMarker.style.border = '2px solid white';
       
-      // Add a line connecting them
+     
       const line = document.createElement('div');
       line.style.position = 'absolute';
       line.style.left = '30%';
@@ -79,7 +74,7 @@ const RouteMap: React.FC<RouteMapProps> = ({ from, to, segments }) => {
       line.style.height = '2px';
       line.style.background = '#3b82f6';
       
-      // Add text labels
+     
       const info = document.createElement('div');
       info.innerText = 'Map View: ' + from + ' to ' + to;
       info.style.textAlign = 'center';
@@ -91,7 +86,7 @@ const RouteMap: React.FC<RouteMapProps> = ({ from, to, segments }) => {
       mockMap.appendChild(toMarker);
       mockMap.appendChild(info);
       
-      // Clear container and add mock map
+      
       if (mapContainer.current) {
         mapContainer.current.innerHTML = '';
         mapContainer.current.appendChild(mockMap);

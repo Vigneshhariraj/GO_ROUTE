@@ -20,7 +20,6 @@ const Settings: React.FC = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Implement logout logic
     navigate('/login');
   };
 

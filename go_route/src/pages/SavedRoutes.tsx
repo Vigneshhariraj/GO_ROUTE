@@ -12,7 +12,7 @@ import {
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 const SavedRoutes = () => {
-  // Mock saved routes data
+  
   const [savedRoutes, setSavedRoutes] = useState([
     {
       id: 1,

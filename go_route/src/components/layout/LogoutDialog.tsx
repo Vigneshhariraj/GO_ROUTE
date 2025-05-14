@@ -22,7 +22,6 @@ const LogoutDialog = ({ open, onOpenChange }: LogoutDialogProps) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Here you would clear auth tokens if implemented
     onOpenChange(false);
     navigate("/login");
   };

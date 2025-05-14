@@ -64,7 +64,6 @@ const SettingsMenu = ({ open, onOpenChange }: SettingsMenuProps) => {
   };
   
   const handleLogout = () => {
-    // Implement actual logout logic
     onOpenChange(false);
     navigate("/login");
   };
@@ -84,9 +83,8 @@ const SettingsMenu = ({ open, onOpenChange }: SettingsMenuProps) => {
               <TabsTrigger value="help">Help & Support</TabsTrigger>
             </TabsList>
             
-            {/* Appearance Tab */}
+            
             <TabsContent value="appearance" className="space-y-6">
-              {/* Dark Mode Toggle */}
               <div className="bg-muted/50 p-4 rounded-lg space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
@@ -121,7 +119,6 @@ const SettingsMenu = ({ open, onOpenChange }: SettingsMenuProps) => {
                 </div>
               </div>
               
-              {/* Language Selection */}
               <div className="bg-muted/50 p-4 rounded-lg space-y-4">
                 <div className="flex items-center space-x-3 mb-3">
                   <Globe className="h-5 w-5" />
@@ -157,9 +154,7 @@ const SettingsMenu = ({ open, onOpenChange }: SettingsMenuProps) => {
               </div>
             </TabsContent>
             
-            {/* Preferences Tab */}
             <TabsContent value="preferences" className="space-y-6">
-              {/* Notification Settings */}
               <div className="bg-muted/50 p-4 rounded-lg space-y-4">
                 <div className="flex items-center space-x-3 mb-3">
                   <Bell className="h-5 w-5" />
@@ -255,9 +250,7 @@ const SettingsMenu = ({ open, onOpenChange }: SettingsMenuProps) => {
               </div>
             </TabsContent>
             
-            {/* Help & Support Tab */}
             <TabsContent value="help" className="space-y-6">
-              {/* How GoRoute Works */}
               <div className="bg-muted/50 p-4 rounded-lg space-y-4">
                 <div className="flex items-center space-x-3 mb-1">
                   <Info className="h-5 w-5" />
@@ -321,7 +314,6 @@ const SettingsMenu = ({ open, onOpenChange }: SettingsMenuProps) => {
                 </Button>
               </div>
               
-              {/* Contact Support */}
               <div className="bg-muted/50 p-4 rounded-lg space-y-4">
                 <div className="flex items-center space-x-3 mb-1">
                   <Phone className="h-5 w-5" />
@@ -363,7 +355,6 @@ const SettingsMenu = ({ open, onOpenChange }: SettingsMenuProps) => {
         </DialogContent>
       </Dialog>
       
-      {/* Logout Confirmation Dialog */}
       {logoutDialogOpen && (
         <Dialog open={logoutDialogOpen} onOpenChange={setLogoutDialogOpen}>
           <DialogContent className="max-w-sm">

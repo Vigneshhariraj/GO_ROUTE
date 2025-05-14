@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { User } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 
-// Profile button bottom right
 const FloatingProfileButton = () => {
   const navigate = useNavigate();
 

@@ -32,7 +32,7 @@ const WakeMeUpModal = ({ bus, onClose }: WakeMeUpModalProps) => {
     setIsSubmitting(true);
 
     try {
-      await axios.post("/api/routebus/wake-me-up/", {  // ✅ FIXED endpoint here
+      await axios.post("/api/routebus/wake-me-up/", { 
         bus_number: bus.number,
         destination: bus.to,
         arrival_time: bus.arrival,

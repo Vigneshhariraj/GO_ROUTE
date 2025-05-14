@@ -26,7 +26,7 @@ interface JourneyLeg {
 }
 
 interface Journey {
-  label: string; // "Best Route", "Suggested Journey"
+  label: string; 
   legs: JourneyLeg[];
 }
 
@@ -42,9 +42,26 @@ const MultiModalResults = () => {
   const { journeys = [], from = '', to = '' } = location.state || {};
 
   const handleStartJourney = (journey: Journey) => {
-    toast.success("Starting journey...");
-    // You can add navigation if needed
+    if (!journey.legs || journey.legs.length === 0) {
+      toast.error("No route legs found");
+      return;
+    }
+  
+    const origin = encodeURIComponent(journey.legs[0].from.trim());
+    const destination = encodeURIComponent(journey.legs[journey.legs.length - 1].to.trim());
+    const url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}`;
+  
+    window.open(url, '_blank');
   };
+  
+
+  const startJourney = (from: string, to: string) => {
+    const origin = encodeURIComponent(from.trim());
+    const destination = encodeURIComponent(to.trim());
+    const url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}`;
+    window.open(url, '_blank');
+  };
+  
 
   const handleSaveRoute = (journey: Journey) => {
     toast.success("Route saved successfully");
@@ -95,7 +112,7 @@ const MultiModalResults = () => {
                       <div className="flex items-center gap-4 text-sm text-muted-foreground mt-1">
                         <div className="flex items-center gap-1">
                           <Clock className="h-4 w-4" />
-                          {/* Total duration from legs */}
+                          
                           {journey.legs.reduce((sum, l) => sum + l.duration_mins, 0)} min
                         </div>
                         <div className="flex items-center gap-1">

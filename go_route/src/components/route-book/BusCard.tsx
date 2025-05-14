@@ -13,7 +13,7 @@ interface BusCardProps {
   bus: BusData;
   onBookNow: (bus: BusData) => void;
   onJoinWaitlist: (bus: BusData) => void;
-  onWakeMeUp?: (bus: BusData) => void; // left for backward compat
+  onWakeMeUp?: (bus: BusData) => void; 
   extraAction?: {
     label: string;
     icon?: React.ReactNode;

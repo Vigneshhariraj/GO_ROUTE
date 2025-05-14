@@ -21,7 +21,7 @@ interface JourneyLeg {
 }
 
 interface Journey {
-  label: string; // "Best Route", "Suggested Journey"
+  label: string; 
   legs: JourneyLeg[];
 }
 
@@ -57,7 +57,7 @@ const MultiModalJourney = () => {
         to
       });
 
-      // ✅ Navigate to results page with journey data
+      
       navigate('/multi-modal-results', { state: { journeys: response.data.journeys, from, to } });
     } catch (err) {
       console.error(err);

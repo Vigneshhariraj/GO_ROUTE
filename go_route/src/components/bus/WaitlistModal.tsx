@@ -36,7 +36,7 @@ const WaitlistModal = ({ bus, onClose }: WaitlistModalProps) => {
     setIsSubmitting(true);
 
     try {
-      await axios.post("/api/waitlist/", { // ✅ Use proxy URL
+      await axios.post("/api/waitlist/", {
         email,
         phone,
         bus_number: bus.number,

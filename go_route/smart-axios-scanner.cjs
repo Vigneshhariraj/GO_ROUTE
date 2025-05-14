@@ -51,7 +51,7 @@ function findTsxFiles(folder) {
   }
 }
 
-// 👇 Adjust your src folder
+
 const targetFolder = './src';
 findTsxFiles(targetFolder);
 

@@ -21,7 +21,7 @@ const IndoorNavigation = () => {
   const [error, setError] = useState<string | null>(null);
   const [selectedLocation, setSelectedLocation] = useState<IndoorLocation | null>(null);
 
-  // ✅ Fetch indoor locations using axios
+
   useEffect(() => {
     const fetchLocations = async () => {
       setLoading(true);

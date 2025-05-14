@@ -38,7 +38,6 @@ export const BusListStep = ({
 
   return (
     <div className="space-y-4">
-      {/* Top Info Section */}
       <div className="bg-card p-4 rounded-lg flex items-center justify-between">
         <div>
           <div className="flex items-center mb-1">
@@ -58,7 +57,6 @@ export const BusListStep = ({
         </Button>
       </div>
 
-      {/* Tabs Section */}
       <Tabs defaultValue="all">
         <TabsList className="w-full grid grid-cols-3">
           <TabsTrigger value="all">All Buses</TabsTrigger>
@@ -66,7 +64,7 @@ export const BusListStep = ({
           <TabsTrigger value="sleeper">Sleepers</TabsTrigger>
         </TabsList>
 
-        {/* All Buses Tab */}
+        
         <TabsContent value="all" className="space-y-4 mt-4">
           {filteredBuses.length > 0 ? (
             filteredBuses.map((bus) => (
@@ -89,7 +87,7 @@ export const BusListStep = ({
           )}
         </TabsContent>
 
-        {/* AC Buses Tab */}
+        
         <TabsContent value="ac" className="space-y-4 mt-4">
           {acBuses.length > 0 ? (
             acBuses.map((bus) => (
@@ -112,7 +110,7 @@ export const BusListStep = ({
           )}
         </TabsContent>
 
-        {/* Sleeper Buses Tab */}
+        
         <TabsContent value="sleeper" className="space-y-4 mt-4">
           {sleeperBuses.length > 0 ? (
             sleeperBuses.map((bus) => (
@@ -136,7 +134,7 @@ export const BusListStep = ({
         </TabsContent>
       </Tabs>
 
-      {/* Help Section */}
+      
       <Card>
         <div className="p-4">
           <h3 className="font-semibold mb-2">Need Help?</h3>

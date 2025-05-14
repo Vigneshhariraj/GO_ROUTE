@@ -9,7 +9,6 @@ import Layout from "@/components/layout/Layout";
 import Home from "@/pages/Home";
 import Login from "@/pages/Login";
 import Profile from "@/pages/Profile";
-// import RouteBook from "@/pages/RouteBook";  // ⛔ Remove old RouteBook import
 import CityBus from "@/pages/CityBus";
 import SOS from "@/pages/SOS";
 import IndoorNavigation from "@/pages/IndoorNavigation";
@@ -24,7 +23,6 @@ import ChatBot from "./pages/ChatBot";
 import RouteBusSearch from "@/pages/RouteBusSearch";
 import Preference from "@/pages/RouteBus/Preference";
 import BusType from "@/pages/RouteBus/BusType";
- // ✅ Correct import
 
 const queryClient = new QueryClient();
 
@@ -40,10 +38,8 @@ const App = () => (
               <Route path="/login" element={<Login />} />
               <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
-                <Route path="profile" element={<Profile />} />
-                {/* Remove old RouteBook */}
-                {/* <Route path="route-bus" element={<RouteBook />} /> */}
-                <Route path="route-bus" element={<RouteBusSearch />} /> {/* ✅ Correct Route */}
+                <Route path="profile" element={<Profile />} />                
+                <Route path="route-bus" element={<RouteBusSearch />} /> 
                 <Route path="city-bus" element={<CityBus />} />
                 <Route path="indoor-navigation" element={<IndoorNavigation />} />
                 <Route path="multi-modal" element={<MultiModalJourney />} />

@@ -41,13 +41,13 @@ function Preference() {
         </p>
       </div>
 
-      {/* Safety Info */}
+      
       <div className="bg-green-50 text-green-900 border border-green-200 p-4 rounded-md text-sm">
         <ShieldCheck className="inline-block mr-2 h-4 w-4" />
         Women's safety enabled buses will be listed first when available.
       </div>
 
-      {/* Preference Cards */}
+      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card
           onClick={() => setSelected("women")}
@@ -80,7 +80,7 @@ function Preference() {
         </Card>
       </div>
 
-      {/* Navigation Buttons */}
+      
       <div className="flex justify-between pt-6">
         <Button variant="ghost" onClick={() => navigate(-1)}>
           Back

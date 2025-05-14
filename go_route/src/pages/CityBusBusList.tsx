@@ -22,7 +22,7 @@ interface CityBusBusListProps {
   getCrowdBadge: (level: string) => React.ReactNode;
   getCrowdBarColor: (level: string) => string;
   getCrowdBarWidth: (level: string) => string;
-  trackButtonLabel: string; // ✅ ADDED this to fix the prop error
+  trackButtonLabel: string; 
 }
 
 export function CityBusBusList({
@@ -34,7 +34,7 @@ export function CityBusBusList({
   getCrowdBadge,
   getCrowdBarColor,
   getCrowdBarWidth,
-  trackButtonLabel, // ✅ Accept trackButtonLabel
+  trackButtonLabel, 
 }: CityBusBusListProps) {
   return (
     <div className="space-y-3">
@@ -44,7 +44,7 @@ export function CityBusBusList({
         </h2>
         <Button variant="ghost" size="sm" className="text-muted-foreground">
           <RefreshCw className="mr-2 h-4 w-4" />
-          {trackButtonLabel} {/* ✅ Show the label here */}
+          {trackButtonLabel} 
         </Button>
       </div>
       {buses.map((bus) => (

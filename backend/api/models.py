@@ -9,7 +9,7 @@ class CityBus(models.Model):
     distance_km = models.FloatField()
     time_minutes = models.IntegerField()
     next_bus_in_min = models.IntegerField()
-    crowd_level = models.CharField(max_length=20)  # e.g., Low, Medium
+    crowd_level = models.CharField(max_length=20)  
 
     def __str__(self):
         return f"{self.route_number} - {self.route_name}"

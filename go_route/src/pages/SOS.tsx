@@ -12,11 +12,11 @@ import {
   Bell, User, Clock, CheckCircle, XCircle, Users, Ambulance,
   Activity, ShieldAlert
 } from "lucide-react";
-import useUserLocation from "@/hooks/useUserLocation"; // ✅ Import GPS Hook
+import useUserLocation from "@/hooks/useUserLocation"; 
 
 const SOS = () => {
   const navigate = useNavigate();
-  const { latitude, longitude, error } = useUserLocation(); // ✅ Use GPS Hook
+  const { latitude, longitude, error } = useUserLocation(); 
 
   const [countdown, setCountdown] = useState<number | null>(null);
   const [sosActivated, setSosActivated] = useState(false);
@@ -112,7 +112,6 @@ const SOS = () => {
         <h1 className="text-2xl font-bold ml-2">Emergency SOS</h1>
       </div>
 
-      {/* ✅ Live Location */}
       <Card className="mb-6">
         <CardContent className="p-4">
           <div className="flex items-start gap-3">
@@ -142,7 +141,6 @@ const SOS = () => {
         </CardContent>
       </Card>
 
-      {/* SOS Card */}
       <Card className={sosActivated ? "bg-red-50 dark:bg-red-950/20 border-red-300 mb-6" : "mb-6"}>
         <CardHeader className="pb-2">
           <CardTitle className="flex items-center gap-2 text-red-600">
@@ -211,7 +209,6 @@ const SOS = () => {
         </CardContent>
       </Card>
 
-      {/* Emergency Contact Section */}
       <Card className="mb-6">
         <CardHeader className="pb-2">
           <CardTitle className="text-base flex items-center gap-2">
@@ -244,7 +241,6 @@ const SOS = () => {
         </CardContent>
       </Card>
 
-      {/* Emergency Numbers Section */}
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-base flex items-center gap-2">

@@ -89,7 +89,7 @@ const Home = () => {
         </p>
       </div>
 
-      {/* Main Features */}
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {mainFeatures.map((feature, index) => (
           <Link to={feature.link} key={index}>
@@ -106,7 +106,7 @@ const Home = () => {
         ))}
       </div>
 
-      {/* Saved Routes */}
+      
       <div>
         <div className="flex justify-between items-center mb-2">
           <h2 className="text-lg font-semibold">⭐ Saved Routes</h2>
@@ -126,7 +126,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Booking History */}
+     
       <div>
         <div className="flex justify-between items-center mb-2">
           <h2 className="text-lg font-semibold">🗓️ Booking History</h2>
@@ -152,7 +152,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* User Reviews */}
+      
       <div>
         <h2 className="text-lg font-semibold mb-2">🙋 What Users Say</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

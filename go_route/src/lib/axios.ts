@@ -7,10 +7,10 @@ const instance = axios.create({
     'Accept': 'application/json',
     'Content-Type': 'application/json',
   },
-  timeout: 10000, // optional: 10 sec timeout
+  timeout: 10000, 
 });
 
-// Add interceptors if you want to handle global errors
+
 instance.interceptors.response.use(
   (response) => response,
   (error) => {

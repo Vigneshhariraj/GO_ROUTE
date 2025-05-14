@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">GoRoute</string>
+    <string name="title_activity_main">GoRoute</string>
+    <string name="package_name">com.goroute.india</string>
+    <string name="custom_url_scheme">com.goroute.india</string>
+</resources>

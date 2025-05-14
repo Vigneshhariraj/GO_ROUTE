@@ -6,7 +6,7 @@ from .views import CityBusSearchAPIView
 
 urlpatterns = [
     path('navigation/', get_navigation_info),
-    path('api/', include('chatbot.urls')),
+    path('chatbot/', include('chatbot.urls')),
     path('search/', CityBusSearchAPIView.as_view(), name='citybus-search'),
 
 ]
